@@ -24,6 +24,8 @@ spec:
   syncPolicy:
     # Determines whether the controller will delete Applications when an ApplicationSet is deleted.
     preserveResourcesOnDeletion: false
+    # Determines if/when the applicationset modifies Children Applications (https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Controlling-Resource-Modification/)
+    applicationsSync: create-only # create-update, create-delete, sync
   # Alpha feature to determine the order in which ApplicationSet applies changes.
   strategy:
   # This field lets you define fields which should be ignored when applying Application resources. This is helpful if you
